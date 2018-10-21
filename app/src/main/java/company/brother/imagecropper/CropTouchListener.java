@@ -3,6 +3,7 @@ package company.brother.imagecropper;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.CornerPathEffect;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -40,9 +41,9 @@ public class CropTouchListener implements View.OnTouchListener {
     private void initCanvas() {
         mPaint = new Paint();
         mPaint.setColor(Color.WHITE);
-        mPaint.setStrokeWidth(5);
+        mPaint.setStrokeWidth(10);
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setPathEffect(new DashPathEffect(new float[]{15.0f, 5.0f}, 0));
+        mPaint.setPathEffect(new CornerPathEffect(30));
     }
 
     @Override
